@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Form Container */
+    .login-form {
+      background: #ffffff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333333;
+    }
+
+    /* Input Fields */
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    /* Submit Button */
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Additional Text */
+    .login-form p {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #555555;
+    }
+
+    .login-form a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .login-form a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form class="login-form">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button type="submit">Log In</button>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+  </form>
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+
+    import { getAuth , GoogleAuthProvider , signInWithRedirect } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCIAZ7nR1ixCX4YwgusTnPuvhDFYoHlEPQ",
+      authDomain: "secu1-auth-b294a.firebaseapp.com",
+      projectId: "secu1-auth-b294a",
+      storageBucket: "secu1-auth-b294a.firebasestorage.app",
+      messagingSenderId: "960614932325",
+      appId: "1:960614932325:web:6e3f714a2cf5237fef0b8c"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const provider = new GoogleAuthProvider(app);
+  </script>
+
+
+
+
+</html>
